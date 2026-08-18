@@ -1,0 +1,60 @@
+{% comment %}
+  Two fixes for al_img_tools' medium-zoom (see plugins/al_img_tools_scripts.liquid)
+  as applied to publication preview thumbnails (.preview[data-zoomable]):
+
+  1. By default it zooms to whichever responsive <source> the browser picked
+     for inline display (img.currentSrc), capped by site.imagemagick.widths
+     (1400px here) — far below several preview images' native resolution
+     (some are 4000px+ wide). data-zoom-src points it at the <img>'s own
+     unscaled src (which figure.liquid always sets to the original file,
+     regardless of the responsive srcset), so the zoomed view opens at full
+     original resolution instead of an upscaled/blurry thumbnail.
+
+  2. medium-zoom's default margin is 0, so it scales large images up to
+     fill the entire viewport edge-to-edge — the source files themselves
+     range up to ~7000px wide, so this reads as overwhelmingly "huge" on
+     screen even though nothing about the files changed. There's no
+     per-image way to configure margin (it's a global mediumZoom() init
+     option), so we detach these images from al_img_tools' broad
+     `[data-zoomable]` instance and re-init our own scoped instance with
+     a viewport-relative margin, leaving every other zoomable image on the
+     site (profile photo, project images, etc.) on the default behavior.
+
+  This script is intentionally NOT deferred and sits earlier in the page
+  than the layout's footer scripts, so its DOMContentLoaded listener runs
+  before al_img_tools' (registered when its deferred script executes,
+  which happens after this one) — the data-zoomable removal below has to
+  land before that instance's own querySelectorAll runs.
+{% endcomment %}
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    var previews = document.querySelectorAll(".preview[data-zoomable]");
+    if (!previews.length) return;
+
+    previews.forEach((img) => {
+      if (!img.hasAttribute("data-zoom-src")) {
+        img.setAttribute("data-zoom-src", img.src);
+      }
+      // Opt these out of al_img_tools' default-margin instance; we
+      // re-init zoom for them ourselves below with a larger margin.
+      img.removeAttribute("data-zoomable");
+    });
+
+    function initPreviewZoom() {
+      if (typeof mediumZoom !== "function") return;
+      var margin = Math.max(40, Math.round(Math.min(window.innerWidth, window.innerHeight) * 0.12));
+      mediumZoom(previews, {
+        margin: margin,
+        background: getComputedStyle(document.documentElement).getPropertyValue("--global-bg-color") + "ee",
+      });
+    }
+
+    // mediumZoom loads via a deferred CDN <script>, which may not have
+    // executed yet at this point; wait for it if needed.
+    if (typeof mediumZoom === "function") {
+      initPreviewZoom();
+    } else {
+      window.addEventListener("load", initPreviewZoom);
+    }
+  });
+</script>

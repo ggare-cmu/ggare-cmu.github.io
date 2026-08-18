@@ -1,8 +1,35 @@
-Adams:
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"Galeotti":
+  - firstname: ["John", "J.", "J. M.", "John Michael"]
+    url: https://www.ri.cmu.edu/ri-faculty/john-galeotti/
 
-Podolsky:
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"Ramanan":
+  - firstname: ["Deva", "D.", "D. K.", "Deva Kannan"]
+    url: https://www.cs.cmu.edu/~deva/
 
-Rosen:
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"Kong":
+  - firstname: ["Shu", "S."]
+    url: https://aimerykong.github.io/
+
+"Mozer":
+  - firstname: ["Michael", "M.", "M. C.", "Michael C."]
+    url: https://home.cs.colorado.edu/~mozer/
+
+"Ke":
+  - firstname: ["Nan Rosemary", "N. R.", "N."]
+    url: https://nke001.github.io/
+
+"Peri":
+  - firstname: ["Neehar", "N."]
+    url: https://www.neeharperi.com/
+
+"Lin":
+  - firstname: ["Zhiqiu", "Z."]
+    url: https://linzhiqiu.github.io/
+
+"Pathak":
+  - firstname: ["Deepak", "D."]
+    url: https://www.cs.cmu.edu/~dpathak/
+
+"Shi":
+  - firstname: ["Jia", "J."]
+    url: https://www.linkedin.com/in/jia-shi-2777a71a1/

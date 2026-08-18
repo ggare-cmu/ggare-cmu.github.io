@@ -1,0 +1,47 @@
+# Venue badge colors and links for publication entries (matched against `abbr`)
+"ICML 2024":
+  url: https://icml.cc/
+  color: "#4285f4"
+
+"ACL 2026":
+  url: https://www.aclweb.org/
+  color: "#ed1c24"
+
+"ECCV 2026":
+  url: https://eccv.ecva.net/
+  color: "#5c2d91"
+
+"MICCAI 2026":
+  url: https://www.miccai.org/
+  color: "#00743f"
+
+"MICCAI-W 2021":
+  url: https://www.miccai.org/
+  color: "#00743f"
+
+"ISBI 2026":
+  url: https://biomedicalimaging.org/
+  color: "#0072bc"
+
+"ISBI 2025":
+  url: https://biomedicalimaging.org/
+  color: "#0072bc"
+
+"ISBI 2021":
+  url: https://biomedicalimaging.org/
+  color: "#0072bc"
+
+"MIA 2022":
+  url: https://www.sciencedirect.com/journal/medical-image-analysis
+  color: "#e9711c"
+
+"BIAS 2023":
+  url: https://www.caim.unibe.ch/
+  color: "#8a1538"
+
+"arXiv":
+  url: https://arxiv.org/
+  color: "#b31b1b"
+
+"Preprint":
+  color: "#6c757d"
