@@ -1,0 +1,271 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Interpretable Lung Ultrasound Biomarkers | Gautam Rajendrakumar Gare </title> <meta name="author" content="Gautam Rajendrakumar Gare"> <meta name="description" content="Clinician-understandable biomarkers that decouple feature learning from downstream clinical tasks."> <meta name="keywords" content="Gautam Gare, vision-language models, VLM adaptation, prompt optimization, few-shot learning, vision-language-action models, interpretability, medical imaging AI, CMU Robotics Institute"> <meta property="og:site_name" content="Gautam Rajendrakumar Gare"> <meta property="og:type" content="website"> <meta property="og:title" content="Gautam Rajendrakumar Gare | Interpretable Lung Ultrasound Biomarkers"> <meta property="og:url" content="https://ggare-cmu.github.io/projects/3_lus_biomarkers/"> <meta property="og:description" content="Clinician-understandable biomarkers that decouple feature learning from downstream clinical tasks."> <meta property="og:image" content="https://ggare-cmu.github.io/assets/img/grg_profile_pic.jpg"> <meta property="og:locale" content="en"> <meta name="twitter:card" content="summary"> <meta name="twitter:title" content="Interpretable Lung Ultrasound Biomarkers"> <meta name="twitter:description" content="Clinician-understandable biomarkers that decouple feature learning from downstream clinical tasks."> <meta name="twitter:image" content="https://ggare-cmu.github.io/assets/img/grg_profile_pic.jpg"> <script type="application/ld+json">
+    {
+        "author":
+        {
+            "@type": "Person",
+            "name": "Gautam Rajendrakumar Gare"
+        },
+        "url": "https://ggare-cmu.github.io/projects/3_lus_biomarkers/",
+        "@type": "WebSite",
+        "description": "Clinician-understandable biomarkers that decouple feature learning from downstream clinical tasks.",
+        "headline": "Interpretable Lung Ultrasound Biomarkers",
+        
+        "sameAs": [null,"https://scholar.google.com/citations?user=BX4jUxEAAAAJ","https://github.com/ggare-cmu","https://www.linkedin.com/in/gautam-gare","https://orcid.org/0000-0002-1689-9626","https://www.semanticscholar.org/author/101891582","https://dblp.org/pid/274/1621","https://www.ri.cmu.edu/ri-people/gautam-gare/","https://www.cs.cmu.edu/~ggare"],
+        
+        "name": "Gautam Rajendrakumar Gare",
+        "@context": "https://schema.org"
+    }
+  </script> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 1200px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%A5%B7%F0%9F%8F%BC&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://ggare-cmu.github.io/projects/3_lus_biomarkers/"> <script src="/assets/js/theme.js?v=87621e0a49a1a473077b34e3f4d23ae1"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Gautam</span> Rajendrakumar Gare </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">About </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/patents/">Patents </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">Research <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item "> <a class="nav-link" href="/teaching/">Teaching &amp; Service </a> </li> <li class="nav-item "> <a class="nav-link" href="/wildlife/">Wildlife </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Interpretable Lung Ultrasound Biomarkers</h1> <p class="post-description">Clinician-understandable biomarkers that decouple feature learning from downstream clinical tasks.</p> </header> <article> <p><strong>Problem.</strong> Every new clinical task (diagnosis, severity, S/F ratio) traditionally requires assembling a labeled dataset and training a new end-to-end network, at high annotation cost and with opaque features.</p> <p><strong>Finding.</strong> A biomarker classification pre-task learns an informative, concise, and interpretable feature space from ultrasound videos with only weak video-level supervision. Downstream expert models built on these biomarker features match end-to-end models in accuracy at a fraction of the training cost (ISBI 2026). The same biomarker vocabulary supports severity scoring via weakly supervised contrastive learning (ISBI 2025) and improves model reliability under distribution shift (BIAS 2023).</p> <p><strong>Why it matters.</strong> Clinicians reason in biomarkers, not activations. A shared, interpretable feature space makes model behavior checkable and new clinical tasks cheap.</p> <p>This line of work was developed with clinical collaborators at LSU Health and featured in CMU SCS’s LINK Magazine (<a href="https://magazine.cs.cmu.edu/seeing-beneath-the-surface" rel="external nofollow noopener" target="_blank">“Seeing Beneath The Surface”</a>, 2022). It also produced my earlier COVID-19 work: dense pixel-labeling for reverse-transfer diagnostic learning (ISBI 2021) and the role of pleura and adipose in lung ultrasound AI (LL-COVID19 workshop, MICCAI 2021).</p> <p>See the <a href="/publications/">publications page</a> for the papers.</p> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Gautam Rajendrakumar Gare. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "About",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-publications",
+          title: "Publications",
+          description: "Peer-reviewed publications in reverse chronological order (ICML, ACL Findings, ISBI, Medical Image Analysis, MICCAI workshops). See also my Google Scholar profile and 7 patents.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-patents",
+          title: "Patents",
+          description: "5 U.S. and 2 Indian patents.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/patents/";
+          },
+        },{id: "nav-research",
+          title: "Research",
+          description: "My main research threads. Each page states the problem, the finding, and the resulting publications.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Ph.D. candidate at CMU Robotics Institute. On the job market for research scientist roles (graduating late 2026). Download the PDF for the latest version.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "nav-teaching-amp-service",
+          title: "Teaching & Service",
+          description: "Teaching, reviewing, and mentorship.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/";
+          },
+        },{id: "nav-wildlife",
+          title: "Wildlife",
+          description: "Wildlife photography from national parks and reserves across India.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/wildlife/";
+          },
+        },{id: "news-started-my-research-internship-at-dawnlight-inc-working-on-multimodal-human-action-recognition-for-medical-and-assisted-living-settings-with-manager-hadi-kiapour-advised-by-prof-fei-fei-li-and-prof-ehsan-adeli",
+          title: 'Started my research internship at DawnLight Inc., working on multimodal human action recognition...',
+          description: "",
+          section: "News",},{id: "news-our-paper-the-role-of-pleura-and-adipose-in-lung-ultrasound-ai-was-accepted-at-the-ll-covid19-workshop-miccai-2021-sparkles",
+          title: 'Our paper The Role of Pleura and Adipose in Lung Ultrasound AI was...',
+          description: "",
+          section: "News",},{id: "news-started-my-ph-d-in-the-robotics-institute-at-carnegie-mellon-university-advised-by-prof-john-galeotti-and-prof-deva-ramanan-mortar-board",
+          title: 'Started my Ph.D. in the Robotics Institute at Carnegie Mellon University, advised by...',
+          description: "",
+          section: "News",},{id: "news-our-paper-w-net-dense-and-diagnostic-semantic-segmentation-of-subcutaneous-and-breast-tissue-in-ultrasound-was-published-in-the-medical-image-analysis-journal-sparkles",
+          title: 'Our paper W-Net: Dense and diagnostic semantic segmentation of subcutaneous and breast tissue...',
+          description: "",
+          section: "News",},{id: "news-awarded-the-cmlh-translational-fellowship-in-digital-health-at-cmu-trophy",
+          title: 'Awarded the CMLH Translational Fellowship in Digital Health at CMU. <img class="emoji" title=":trophy:" alt=":trophy:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f3c6.png" height="20" width="20">',
+          description: "",
+          section: "News",},{id: "news-my-lung-ultrasound-ai-research-was-featured-in-cmu-school-of-computer-science-s-link-magazine-seeing-beneath-the-surface-newspaper",
+          title: 'My lung ultrasound AI research was featured in CMU School of Computer Science’s...',
+          description: "",
+          section: "News",},{id: "news-presented-improving-model-s-interpretability-and-reliability-using-biomarkers-at-the-bern-interpretable-ai-symposium-bias-2023-speech-balloon",
+          title: 'Presented Improving Model’s Interpretability and Reliability using Biomarkers at the Bern Interpretable AI...',
+          description: "",
+          section: "News",},{id: "news-our-paper-lca-on-the-line-benchmarking-out-of-distribution-generalization-with-class-taxonomies-was-accepted-at-icml-2024-as-an-oral-sparkles",
+          title: 'Our paper LCA-on-the-Line: Benchmarking Out-of-Distribution Generalization with Class Taxonomies was accepted at ICML...',
+          description: "",
+          section: "News",},{id: "news-three-u-s-patent-applications-published-probabilistic-confidence-labels-us20240177000a1-direct-diagnostic-semantic-segmentation-us20240177445a1-and-imaging-biomarker-feature-extraction-us20240249498a1-page-with-curl",
+          title: 'Three U.S. patent applications published: probabilistic confidence labels (US20240177000A1), direct diagnostic semantic segmentation...',
+          description: "",
+          section: "News",},{id: "news-新智元-new-zhiyuan-covered-our-icml-2024-oral-paper-cmu-and-others-propose-a-highly-practical-model-generalization-metric-improving-out-of-distribution-accuracy-by-6-on-lca-on-the-line-newspaper",
+          title: '新智元 (New Zhiyuan) covered our ICML 2024 Oral paper, “CMU and others propose...',
+          description: "",
+          section: "News",},{id: "news-presented-weakly-supervised-contrastive-learning-for-better-severity-scoring-of-lung-ultrasound-at-ieee-isbi-2025-sparkles",
+          title: 'Presented Weakly Supervised Contrastive Learning for Better Severity Scoring of Lung Ultrasound at...',
+          description: "",
+          section: "News",},{id: "news-honored-to-receive-the-liang-zhao-endowed-fellowship-at-cmu-trophy",
+          title: 'Honored to receive the Liang Zhao Endowed Fellowship at CMU. <img class="emoji" title=":trophy:" alt=":trophy:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f3c6.png" height="20" width="20">',
+          description: "",
+          section: "News",},{id: "news-three-papers-accepted-at-ieee-isbi-2026-learner-contrastive-learning-of-granular-labels-learning-generic-lung-ultrasound-biomarkers-and-label-uncertainty-for-ultrasound-segmentation-oral-tada",
+          title: 'Three papers accepted at IEEE ISBI 2026: LEARNER (contrastive learning of granular labels),...',
+          description: "",
+          section: "News",},{id: "news-i-successfully-completed-my-ph-d-proposal-and-am-now-a-ph-d-candidate-i-am-on-the-job-market-for-research-scientist-roles-graduating-late-2026-here-is-my-resume-rocket",
+          title: 'I successfully completed my Ph.D. proposal and am now a Ph.D. candidate. I...',
+          description: "",
+          section: "News",},{id: "news-started-my-summer-research-internship-at-bosch-research-robert-bosch-llc-in-pittsburgh-working-on-grounding-vision-language-action-vla-models-for-autonomous-driving-applications-advised-by-madan-ravi-ganesh-and-chaithanya-kumar-mummadi-car",
+          title: 'Started my summer research internship at Bosch Research (Robert Bosch LLC) in Pittsburgh,...',
+          description: "",
+          section: "News",},{id: "news-our-paper-activation-reward-models-for-few-shot-model-alignment-was-accepted-to-acl-2026-findings-sparkles",
+          title: 'Our paper Activation Reward Models for Few-Shot Model Alignment was accepted to ACL...',
+          description: "",
+          section: "News",},{id: "news-detpo-in-context-learning-with-multi-modal-llms-for-few-shot-object-detection-was-accepted-at-eccv-2026-state-of-the-art-few-shot-detection-with-black-box-vlms-outperforming-specialist-detectors-like-groundingdino-fire",
+          title: 'DetPO: In-Context Learning with Multi-Modal LLMs for Few-Shot Object Detection was accepted at...',
+          description: "",
+          section: "News",},{id: "news-two-new-preprints-on-vlms-attributes-should-come-from-images-not-class-names-distribution-conditioned-attribute-selection-that-beats-prompt-tuning-and-ask-twice-look-twice-prompt-echoing-resolves-the-question-first-paradox-up-to-19-points-training-free-page-facing-up",
+          title: 'Two new preprints on VLMs: Attributes Should Come from Images, Not Class Names...',
+          description: "",
+          section: "News",},{id: "news-both-vlm-preprints-are-now-accepted-as-eccv-2026-workshop-papers-attributes-should-come-from-images-not-class-names-at-the-pfatcv-workshop-and-ask-twice-look-twice-at-the-excv-workshop-tada",
+          title: 'Both VLM preprints are now accepted as ECCV 2026 workshop papers: Attributes Should...',
+          description: "",
+          section: "News",},{id: "projects-inference-time-adaptation-of-vision-language-models",
+          title: 'Inference-Time Adaptation of Vision-Language Models',
+          description: "State-of-the-art few-shot detection, zero-shot classification, and alignment with frozen, black-box VLMs.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_vlm_prompt_optimization/";
+            },},{id: "projects-when-can-models-trust-their-training-data",
+          title: 'When Can Models Trust Their Training Data?',
+          description: "Diagnosing when and why multimodal models generalize, and turning the diagnosis into fixes.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_causal_feature_selection/";
+            },},{id: "projects-interpretable-lung-ultrasound-biomarkers",
+          title: 'Interpretable Lung Ultrasound Biomarkers',
+          description: "Clinician-understandable biomarkers that decouple feature learning from downstream clinical tasks.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_lus_biomarkers/";
+            },},{id: "projects-learning-with-label-structure-and-uncertainty",
+          title: 'Learning with Label Structure and Uncertainty',
+          description: "Getting more out of imperfect labels, from coarse annotations to class taxonomies to RF waveforms.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_label_structure/";
+            },},{id: "projects-patents-amp-translational-work",
+          title: 'Patents &amp; Translational Work',
+          description: "Four U.S. patents translating the research into deployable clinical ML systems.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/5_patents/";
+            },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/Gautam_Gare_Resume.pdf", "_blank");
+        },
+      },{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%67%67%61%72%65@%61%6E%64%72%65%77.%63%6D%75.%65%64%75", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=BX4jUxEAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/ggare-cmu", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/gautam-gare", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0000-0002-1689-9626", "_blank");
+        },
+      },{
+        id: 'social-semanticscholar',
+        title: 'Semantic Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.semanticscholar.org/author/101891582", "_blank");
+        },
+      },{
+        id: 'social-dblp',
+        title: 'DBLP',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://dblp.org/pid/274/1621", "_blank");
+        },
+      },{
+        id: 'social-work',
+        title: 'Work',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.ri.cmu.edu/ri-people/gautam-gare/", "_blank");
+        },
+      },{
+        id: 'social-cmu_cs_homepage',
+        title: 'Cmu_cs_homepage',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.cs.cmu.edu/~ggare", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>

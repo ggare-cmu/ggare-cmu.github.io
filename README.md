@@ -1,3 +1,0 @@
-# Gautam Rajendrakumar Gare
-
-
