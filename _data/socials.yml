@@ -1,0 +1,17 @@
+# this file contains the social media links and usernames of the author
+# the socials will be displayed in the order they are defined here
+# for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
+cv_pdf: /assets/pdf/Gautam_Gare_Resume.pdf # path to your CV PDF file
+email: ggare@andrew.cmu.edu # your email address
+scholar_userid: BX4jUxEAAAAJ # your Google Scholar ID
+github_username: ggare-cmu # your GitHub username
+linkedin_username: gautam-gare # your LinkedIn username
+orcid_id: 0000-0002-1689-9626 # your ORCID ID
+semanticscholar_id: 101891582 # your Semantic Scholar author ID
+dblp_url: https://dblp.org/pid/274/1621 # your dblp profile URL
+work_url: https://www.ri.cmu.edu/ri-people/gautam-gare/ # your institutional homepage
+cmu_cs_homepage:
+  url: https://www.cs.cmu.edu/~ggare # CMU CS department homepage, redirects to personal site
+  title: CMU CS Homepage
+  logo: fa-solid fa-house # icon class; a hash-valued social requires a logo or the socials plugin errors
+rss_icon: false

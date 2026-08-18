@@ -1,0 +1,351 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Gautam Rajendrakumar Gare - Fixed Academic CV (2025)
+% Template: AltaCV (two-column academic layout)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+\geometry{left=1cm,right=1cm,marginparwidth=8.2cm,marginparsep=1cm,top=0.8cm,bottom=0.5cm}
+% \geometry{left=1cm,right=1cm,marginparwidth=8.2cm,marginparsep=1cm,top=0.8cm,bottom=0.5cm}
+% \geometry{left=1cm,right=10.2cm,marginparwidth=8.2cm,marginparsep=1cm,top=0.8cm,bottom=0.5cm}
+
+\definecolor{heading}{HTML}{0B3954}
+\definecolor{accent}{HTML}{1565C0}
+\definecolor{emphasis}{HTML}{283593}
+\definecolor{body}{HTML}{111111}
+\colorlet{name}{heading}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent, citecolor=accent}
+\newcommand{\publink}[2]{{\small[\href{#1}{#2}]}}
+
+% Keep section titles and event headers on the same page as their content
+\usepackage{needspace}
+\NewCommandCopy{\origcvsection}{\cvsection}
+\renewcommand{\cvsection}[2][]{\needspace{6\baselineskip}\origcvsection[#1]{#2}}
+\NewCommandCopy{\origcvevent}{\cvevent}
+\renewcommand{\cvevent}[4]{\needspace{8\baselineskip}\origcvevent{#1}{#2}{#3}{#4}}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\name{Gautam Rajendrakumar Gare}
+\tagline{Inference-Time Adaptation \& Alignment of Vision--Language Models}
+\personalinfo{
+  \email{ggare@andrew.cmu.edu}
+  \linkedin{gautam-gare}
+  \homepage{ggare-cmu.github.io}
+  \location{Pittsburgh, PA}
+}
+
+\begin{document}
+\makecvheader
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Highlighted Research Summary box
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \vspace{-0.4em}
+\vspace{0.2em}
+\begin{tcolorbox}[colback=blue!5!white, colframe=accent, boxrule=0.4pt, arc=2mm, left=1mm, right=1mm, top=1mm, bottom=1mm]
+% \small
+\textbf{Research Summary:} 
+% My research focuses on developing \textbf{causally-grounded and interpretable vision–language models (VLMs)} 
+% for medical imaging. I design frameworks that align neural representations with \textbf{clinician-understandable biomarkers}, 
+% using causal discovery and contrastive learning to improve reliability, transparency, and generalization across 
+% patients and modalities.
+% My research focuses on developing \textbf{causally-grounded, human-aligned, and interpretable 
+% vision–language models (VLMs)} for object detection and medical imaging. I design frameworks that 
+% align neural representations with \textbf{clinician-understandable biomarkers and human feedback}, 
+% using prompt tuning, causal discovery, and contrastive learning to improve reliability, 
+% transparency, and generalization across patients, domains, and modalities.
+% My research focuses on developing \textbf{interpretable and human-aligned vision–language models 
+% (VLMs)} for object detection and medical imaging. I design frameworks that align neural 
+% representations with \textbf{clinician-understandable biomarkers and human feedback}, using 
+% prompt tuning and causal discovery to improve transparency, reliability, and trustworthy 
+% generalization across domains and modalities.
+I make \textbf{frozen vision--language models (VLMs) do new things without touching their weights},
+treating adaptation as an inference-time problem: optimizing prompts (\textbf{DetPO, ECCV 2026}),
+selecting image-conditioned attributes, and reading activations (\textbf{ACL Findings 2026}).
+I study when and why multimodal models generalize (\textbf{ICML 2024 Oral}) and prove these methods
+in the high-stakes setting of medical imaging (5 ISBI papers, \textbf{4 U.S. patents}).
+\textbf{On the job market for research scientist roles} (graduating late 2026).
+\end{tcolorbox}
+\vspace{0.2em}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % \vspace{-0.5em}
+% \cvsection{Research Summary}
+% \small{My research focuses on developing interpretable, causally grounded vision–language models for medical imaging.
+% I explore how contrastive and causal methods can align neural representations with human-understandable biomarkers,
+% improving reliability and clinical trust.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-1em}
+\cvsection{Education}
+\cvevent{Ph.D. in Robotics (Candidate)}{Carnegie Mellon University}{Aug 2021 -- Late 2026 (expected)}{Pittsburgh, PA}
+\begin{itemize}
+\item Advisors: Prof. John Galeotti, Prof. Deva Ramanan
+\item Focus: Inference-time adaptation and alignment of VLMs; generalization; medical imaging AI.
+\end{itemize}
+\vspace{-0.5em}
+\divider
+
+\cvevent{M.S. in Electrical and Computer Engineering}{Carnegie Mellon University}{Dec 2020}{Pittsburgh, PA}
+\begin{itemize}
+\item GPA: 4.00/4.00 - Courses: SLAM, CV, ML, Optimization, Deep Learning
+\end{itemize}
+\vspace{-0.5em}
+
+\divider
+
+\cvevent{B.E. in Electronics and Communication}{BMS College of Engineering}{May 2016}{Bangalore, India}
+% \begin{itemize}
+% \item GPA: 9.4/10.0
+% \end{itemize}
+
+\vspace{-0.5em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Research Experience}
+
+\cvevent{Soft-Prompt Tuning of Vision–Language Models for Few-Shot Object Detection}
+{Robotics Institute, CMU}{Nov 2025 -- Present}{}
+\begin{itemize}
+    \item Designed a soft-prompting framework that learns continuous prompt embeddings 
+          via gradient-based optimization, enabling efficient task adaptation without 
+          modifying the underlying VLM weights.
+    \item Outperformed LoRA fine-tuning in the 10-shot setting, demonstrating that 
+          lightweight prompt optimization can match or exceed parameter-efficient 
+          fine-tuning methods at low data regimes.
+\end{itemize}
+
+\vspace{-0.25cm}
+\divider
+\vspace{-0.25cm}
+
+\cvevent{DetPO: Iterative Prompt Optimization for Few-Shot Object Detection (ECCV 2026)}{Robotics Institute, CMU}{Sep 2025 -- Jan 2026}{}
+\begin{itemize}
+\item Developed an iterative prompt optimization framework using false-positive and false-negative feedback to improve few-shot object detection; accepted at \textbf{ECCV 2026}.
+\item Achieved state-of-the-art results with contemporary VLMs (e.g., Qwen3, Gemini3) on the RF20 object detection dataset, outperforming specialist models such as GroundingDINO under a black-box optimization setting.
+\end{itemize}
+
+\vspace{-0.25cm}
+\divider
+\vspace{-0.25cm}
+
+\cvevent{Distribution-Conditioned Attribute Selection for VLMs}{Robotics Institute, CMU}{2026}{}
+\begin{itemize}
+\item Showed LLM-generated class descriptors are label-conditioned, not image-conditioned: removing class names collapses ImageNet accuracy from 59.5\% to 15.5\%.
+\item Selecting attributes from target images in CLIP's embedding space outperforms CoOp prompt tuning with one image per class, fitting in under a minute instead of 14 hours.
+\end{itemize}
+
+\vspace{-0.25cm}
+\divider
+\vspace{-0.25cm}
+
+\cvevent{Causal Feature Selection \& Natural Experiments}{Robotics Institute, CMU}{Jan 2023 -- Aug 2025}{}
+\begin{itemize}
+\item Designed a Markov--blanket--based causal discovery algorithm for feature selection, improving accuracy and interpretability on medical datasets.
+\item Showed real-world datasets contain natural experiments exploitable via causal inference.
+\end{itemize}
+
+\vspace{-0.25cm}
+\divider
+\vspace{-0.25cm}
+
+\cvevent{Generic Human–Interpretable Lung Ultrasound Biomarkers}{Biomedical Image Guidance Lab, CMU}{2021 -- 2025}{}
+\begin{itemize}
+\item Developed interpretable LUS biomarkers enabling causal and contrastive learning for diagnosis.
+\item Showed biomarker-based features match deep features in downstream performance.
+\end{itemize}
+
+% \vspace{-0.15cm}
+% \divider
+% \vspace{-0.15cm}
+
+% \cvevent{LEARNER: Contrastive Learning for Patient Progression}{CMU / ISBI 2025}{2023 -- 2025}{}
+% \begin{itemize}
+% \item Proposed weakly supervised contrastive pretraining for intra-patient progression learning.
+% \item Improved F1 across modalities (LUS, MRI) under label-scarce settings.
+% \end{itemize}
+
+% \vspace{-0.15cm}
+% \divider
+% \vspace{-0.15cm}
+
+% % \vspace{2cm}
+% \cvevent{Action Recognition in Clinical Settings}{DawnLight Inc. (Stanford-affiliated)}{Jun 2021 -- Aug 2021}{}
+% \begin{itemize}
+% \item Built efficient RGB+IR architectures for fall detection (85\% cross-subject accuracy).
+% \end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Selected Publications}
+
+\begin{itemize}
+\interlinepenalty=10000 % never split a publication entry across pages
+\item \textbf{Gare, G. R.}*, N. Peri*, M. Popov, S. Jain, J. Galeotti, D. Ramanan. (*equal contribution)\\
+\emph{DetPO: In-Context Learning with Multi-Modal LLMs for Few-Shot Object Detection.}\\
+\textbf{European Conference on Computer Vision (ECCV)}, 2026.
+\publink{https://arxiv.org/abs/2603.23455}{paper}~\publink{https://ggare-cmu.github.io/DetPO/}{project}~\publink{https://github.com/ggare-cmu/DetPO}{code}
+\divider
+
+\item \textbf{Gare, G.R.}, J. Shi, Z. Lin, D. Pathak, J. Galeotti, D. Ramanan.\\
+\emph{Attributes Should Come from Images, Not Class Names: Distribution-Conditioned Attribute Selection for VLMs.}\\
+\textbf{PFATCV Workshop at ECCV}, 2026. \textbf{(Oral)}
+\publink{https://arxiv.org/abs/2607.18695}{paper}~\publink{https://ggare-cmu.github.io/AttributeSelect/}{project}
+\divider
+
+\item R. H. Abhinandan, J. Galeotti, D. Ramanan, \textbf{G.R. Gare}.\\
+\emph{Ask Twice, Look Twice: Prompt Echoing Resolves the Question-First Paradox in Vision-Language Models.}\\
+\textbf{eXCV Workshop at ECCV}, 2026.
+\publink{https://arxiv.org/abs/2607.15565}{paper}~\publink{https://rakshanda-cmu.github.io/ask-twice-look-twice/}{project}
+\divider
+
+\item T. Chai, C. Mitra, B. Huang, \textbf{G.R. Gare}, Z. Lin, A. Arbelle, L. Karlinsky, R. Feris, T. Darrell, D. Ramanan, R. Herzig.\\
+\emph{Activation reward models for few-shot model alignment.}\\
+\textbf{Findings of the Association for Computational Linguistics (ACL)}, 2026.
+\publink{https://aclanthology.org/2026.findings-acl.1709/}{paper}
+\divider
+
+\item J. Shi, \textbf{G.R. Gare}, J. Tian, S. Chai, Z. Lin, A. Vasudevan, D. Feng, F. Ferroni, S. Kong.\\
+\emph{LCA-on-the-Line: Benchmarking Out-of-Distribution Generalization with Class Taxonomies.}\\
+\textbf{International Conference on Machine Learning (ICML)}, 2024. \textbf{(Oral)}
+\publink{https://proceedings.mlr.press/v235/shi24d.html}{paper}~\publink{https://elvishelvis.github.io/papers/lca/}{project}
+\divider
+
+\item \textbf{Gare, G.R.}, J. M. Galeotti, M. C. Mozer, D. Ramanan, N. R. Ke.\\
+\emph{Do Real-World Datasets Contain Natural Experiments? An Empirical Study Using Causal Feature Selection.}\\
+\textbf{arXiv:2606.03251}, 2026.
+\publink{https://arxiv.org/abs/2606.03251}{paper}
+\divider
+
+\item \textbf{Gare, G.R.}, T. Fox, P. Lowery, K. Zamora, H. Tran, L. Hutchins, D. Montgomery, A. Krishnan, D. Ramanan, R. Rodriguez, B. deBoisblanc, J. Galeotti.\\
+\emph{Human-Aligned Learning of Interpretable Biomarkers for Lung Ultrasound Diagnosis.}\\
+\textbf{IEEE International Symposium on Biomedical Imaging (ISBI)}, 2026.
+\publink{https://arxiv.org/abs/2206.08398}{paper}
+\divider
+
+\item J. Armouti, N. Madaan, R. Panda, T. Fox, L. Hutchins, A. Krishnan, R. Rodriguez, B. DeBoisblanc, D. Ramanan, J. Galeotti, \textbf{G.R. Gare}.\\
+\emph{LEARNER: Learning Granular Labels from Coarse Labels using Contrastive Learning.}\\
+\textbf{IEEE International Symposium on Biomedical Imaging (ISBI)}, 2026.
+\publink{https://arxiv.org/abs/2411.01144}{paper}
+\divider
+
+\item M. Shivaram, \textbf{G.R. Gare}, L. Hutchins, J. Duplantis, T. Deiss, T.N. Gomes, T. Tran, K.H. Patel, K. Kirby, T.H. Fox, A. Krishnan, D. Ramanan, B. DeBoisblanc, R. Rodriguez, J. Galeotti.\\
+\emph{Label uncertainty for ultrasound segmentation.}\\
+\textbf{IEEE International Symposium on Biomedical Imaging (ISBI)}, 2026. \textbf{(Oral)}
+\publink{https://arxiv.org/abs/2508.15635}{paper}
+\divider
+
+\item \textbf{G.R. Gare}, H.V. Tran, B.P. deBoisblanc, R.L. Rodriguez, J.M. Galeotti.
+\emph{Weakly supervised contrastive learning for better severity scoring of lung ultrasound.}
+\textbf{IEEE International Symposium on Biomedical Imaging (ISBI)}, 2025.
+\publink{https://arxiv.org/abs/2201.07357}{paper}
+\divider
+
+\item \textbf{Gare, G.R.}, T. Fox, B. Chansangavej, A. Krishnan, R. Rodriguez, B. deBoisblanc, D. Ramanan, J. Galeotti.\\
+\emph{Improving Model’s Interpretability and Reliability using Biomarkers.}\\
+\textbf{Bern Interpretable AI Symposium (BIAS)}, 2023.
+\publink{https://arxiv.org/abs/2402.12394}{paper}
+\divider
+
+\item \textbf{Gare, G.R.}, J. Li, R. Joshi, R. Magar, M. P. Vaze, M. Yousefpour, R. Rodriguez, J. Galeotti.\\
+\emph{W-Net: Dense and diagnostic semantic segmentation of subcutaneous and breast tissue in ultrasound.}\\
+\textbf{Medical Image Analysis (MIA)}, 76:102326, 2022.
+\publink{https://doi.org/10.1016/j.media.2021.102326}{paper}
+\divider
+
+\item \textbf{G.R. Gare}, A. Schoenling, V. Philip, H.V. Tran, B.P. deBoisblanc, R.L. Rodriguez, J.M. Galeotti.
+\emph{Dense pixel-labeling for reverse-transfer and diagnostic learning on lung ultrasound for COVID-19 and pneumonia detection.}
+\textbf{IEEE International Symposium on Biomedical Imaging (ISBI)}, 2021, pp. 1406–1410.
+\publink{https://ieeexplore.ieee.org/document/9433826}{paper}
+\divider
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \vspace{0.2cm}
+\needspace{11\baselineskip}
+\vspace{-0.5em}
+\cvsection{Professional Experience}
+
+\cvevent{AI Research Intern}{Robert Bosch LLC (Bosch Research)}{May 2026 -- Aug 2026}{Pittsburgh, PA}
+\begin{itemize}
+\item Researched grounding of vision--language--action (VLA) models for autonomous-vehicle applications, connecting language-conditioned action reasoning to visual scene evidence.
+\end{itemize}
+
+\divider
+
+\cvevent{Computer Vision Research Intern}{DawnLight Inc.}{Jun 2021 -- Aug 2021}{Palo Alto, CA}
+\begin{itemize}
+\item Developed efficient multimodal action recognition networks (RGB + IR) for clinical monitoring.
+\end{itemize}
+
+\divider
+
+\cvevent{Senior Data Scientist \& Software Engineer}{Sling Media R\&D}{Jul 2016 -- Jul 2019}{Bangalore, India}
+\begin{itemize}
+\item Led analytics pipeline for user churn modeling and AirTV Player Android App interface optimization.
+\item Improved image caching, reducing startup time by 20\%.
+\end{itemize}
+
+\divider
+
+\cvevent{Summer Research Fellow}{IIEST, Shibpur}{Jun 2015 -- Jul 2015}{India}
+\begin{itemize}
+\item Built real-time tele-operated robotic arm system with RGB-D feedback.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Selected Patents}
+
+{\footnotesize
+\begin{itemize}
+\item US12154354B2 – \textbf{System and Method for Labeling Ultrasound Data}, granted 2024.
+\item US20240177000A1 – \textbf{System and Method for Training Machine-Learning Models with Probabilistic Confidence Labels}, 2024.
+\item US20240177445A1 – \textbf{System and Method for Direct Diagnostic and Prognostic Semantic Segmentation of Images}, 2024.
+\item US20240249498A1 – \textbf{System, Method, and Computer Program Product for Extracting Features from Imaging Biomarkers with ML Models}, 2024.
+\end{itemize}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cvsection{Fellowships \& Awards}
+
+\begin{itemize}
+\item Liang Zhao Endowed Fellowship, CMU (2025)
+\item CMLH Translational Fellowship, CMU (2022)
+\item NSF XSEDE Compute Grant (130,500 GPU hours, 2020)
+\item Neocortex EUP Compute Award, NSF PSC (2020)
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% RIGHT COLUMN
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Teaching \& Service}
+
+\begin{itemize}
+\item Guest Lecturer – 16-720 Computer Vision (Fall 2026)
+\item Research Mentor – supervised the prompt-echoing VLM study (arXiv:2607.15565, 2026)
+\item Research Mentor – supervised the lung-ultrasound CHF-readmission study (arXiv:2605.18878, 2026)
+\item Teaching Assistant – 16-720 Computer Vision (Spring 2022, Fall 2021)
+\item Reviewer – ECCV (2026), eXCV Workshop at ECCV (2026), MICCAI (2022–2024), HSMR (2023)
+\item Invited Panelist – LLCOVID19 MICCAI Workshop (2021)
+\item Mentorship – CMU AI Mentoring Program (2021)
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Media Coverage}
+
+\begin{itemize}
+\item Megan Harris, \emph{“Seeing Beneath The Surface”}, \textbf{LINK Magazine},
+School of Computer Science, Carnegie Mellon University, Summer 2022 Issue.
+[\href{https://magazine.cs.cmu.edu/seeing-beneath-the-surface}{article}]
+\item \emph{“CMU and others propose a highly practical `model generalization' metric, improving out-of-distribution accuracy by 6\% | ICML 2024 Oral”}, \textbf{New Zhiyuan}, December 26, 2024, covering \emph{LCA-on-the-Line}.
+[\href{https://mp.weixin.qq.com/s/MC8eDigX5WOJySh8StkBDA}{article}]
+\end{itemize}
+
+\end{document}

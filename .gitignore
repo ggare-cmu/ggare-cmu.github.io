@@ -1,10 +1,69 @@
 _site
 .bundle
-.sass-cache
+.DS_store
+.idea
 .jekyll-cache
 .jekyll-metadata
-.DS_store
 .ruby-version
+.sass-cache
 .tweet-cache
-Gemfile.lock
+.venv
+assets/libs/
+assets/rendercv/rendercv_output/*.typ
+al-folio-upgrade-report.md
+node_modules/
+output/playwright/
+test-results/
 vendor
+
+
+# resume_tex: keep only the active resume source + its class file; ignore old
+# drafts (cv_new_v1.tex, main.tex, template.tex), build artifacts (cv_new.pdf,
+# *.aux/*.log/*.out), unused assets (photo.jpg, *.bib, sections/), and the zip.
+resume_tex/*
+!resume_tex/cv_new.tex
+!resume_tex/altacv.cls
+.claude/skills/*
+
+# Wildlife: unused/duplicate source images not shown on /wildlife/ (curated list in _pages/wildlife_pics.md)
+assets/wildlife_clicks/exclude_*
+assets/wildlife_clicks/11.jpg
+assets/wildlife_clicks/14.jpg
+assets/wildlife_clicks/5.jpg
+assets/wildlife_clicks/9.jpg
+assets/wildlife_clicks/Bhraminy Starling 1.jpg
+assets/wildlife_clicks/Bhraminy Starling Jiju.jpg
+assets/wildlife_clicks/Black Napped Monarch Sm.jpg
+assets/wildlife_clicks/Dear 1.jpg
+assets/wildlife_clicks/Dear 2.jpg
+assets/wildlife_clicks/Indian Eagle Owl Sw.jpg
+assets/wildlife_clicks/Leppy Poster 2 small.jpg
+assets/wildlife_clicks/Leppy Poster 2 small.png
+assets/wildlife_clicks/Leppy Poster 2.jpg
+assets/wildlife_clicks/Leppy Poster 2.png
+assets/wildlife_clicks/Leppy Poster smallest.jpg
+assets/wildlife_clicks/Prince Side Look Nov13 sm.jpg
+assets/wildlife_clicks/Prince Side Look Nov13.jpg
+assets/wildlife_clicks/Rufous Treepie.jpg
+assets/wildlife_clicks/Ser eagle.jpg
+assets/wildlife_clicks/Serpant Eagle 4.jpg
+assets/wildlife_clicks/Serpant Eagle Jiju.jpg
+assets/wildlife_clicks/Serpant Eagle1.jpg
+assets/wildlife_clicks/Serpant Eagle2.jpg
+assets/wildlife_clicks/Serpant Eagle3.jpg
+assets/wildlife_clicks/Slot Bear1.jpg
+assets/wildlife_clicks/Slot Bear2.jpg
+assets/wildlife_clicks/Slot Bear3.jpg
+assets/wildlife_clicks/Slot Bear4.jpg
+assets/wildlife_clicks/Stork-billed Kingfisher.jpg
+assets/wildlife_clicks/Swallow 1.jpg
+assets/wildlife_clicks/Swift1.jpg
+assets/wildlife_clicks/Tiger Closeup Yawn1.jpg
+assets/wildlife_clicks/Tiger Jiju.jpg
+assets/wildlife_clicks/Tiger Prince.jpg
+assets/wildlife_clicks/Tiger Rolling SB.jpg
+assets/wildlife_clicks/Tiger.jpg
+assets/wildlife_clicks/cormorand with Kill Sm1.jpg
+assets/wildlife_clicks/cormorand with Kill Sm2.jpg
+assets/wildlife_clicks/cormorant2.jpg
+assets/wildlife_clicks/White Bellied Eagle Owl Sm 1.jpg

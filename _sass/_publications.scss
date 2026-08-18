@@ -1,0 +1,244 @@
+/*******************************************************************************
+ * Publication and bibliography styles
+ *
+ * LOCAL OVERRIDE of al_folio_core's _sass/_publications.scss (v1.0.11).
+ * Two changes from upstream:
+ *
+ * 1. .preview is given a fixed 3:2 box (aspect-ratio + object-fit:
+ *    contain) instead of rendering at each source image's native aspect
+ *    ratio. Publication preview images range from 0.6:1 (portrait) to
+ *    4:1 (ultra-wide), so unconstrained sizing made some thumbnails tiny
+ *    and others very tall/long. `contain` (not `cover`) scales each
+ *    image down to fit the box without cropping any of it; the
+ *    underlying image files are untouched, and the full-resolution
+ *    original is still what opens on click (see
+ *    _includes/zoom_original_fix.liquid).
+ *
+ * 2. A top-level `.preview.medium-zoom-image--opened` rule (bottom of
+ *    this file, deliberately OUTSIDE the .publications nesting) repeats
+ *    that same object-fit: contain for the zoomed state. It has to be a
+ *    separate, ancestor-free rule: medium-zoom clones the image and
+ *    appends the clone directly to document.body, relocating it clean
+ *    out of the .publications ol.bibliography li ancestor chain the
+ *    nested rule below depends on — so that nested rule's object-fit
+ *    silently stops applying to the clone (falls back to the default,
+ *    `fill`, which stretches/distorts the image).
+ *
+ * Everything else in this file is an unmodified copy of upstream; port
+ * any future gem changes here too (see `al-folio upgrade overrides`).
+ ******************************************************************************/
+
+@use "variables" as v;
+
+.publications {
+  margin-top: 2rem;
+
+  h1 {
+    color: var(--global-theme-color);
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+
+    span {
+      font-size: 1.5rem;
+    }
+  }
+
+  h2.bibliography {
+    color: var(--global-divider-color);
+    border-top: 1px solid var(--global-divider-color);
+    padding-top: 1rem;
+    margin-top: 2rem;
+    text-align: right;
+  }
+
+  ol.bibliography {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+
+    li {
+      margin-bottom: 1rem;
+
+      // See the top-level .preview.medium-zoom-image--opened rule at the
+      // bottom of this file for the zoomed state (it can't live here —
+      // has to be an ancestor-free selector). Whichever rule applies:
+      // width/height must NOT be touched for the zoomed state. medium-zoom
+      // clones this <img> (cloneTarget() in its source) and pins the
+      // clone's box, via inline style, to this element's on-page pixel
+      // size — its scale-to-fit-viewport transform is computed
+      // specifically against that box. Forcing width/height to "auto"
+      // lets the box balloon to the image's full natural size, some of
+      // which are 4000px+ wide, *after* the scale factor was already
+      // computed for the small box — the zoomed image then renders
+      // wildly oversized, worse than the crop this would-be fix was
+      // meant to solve. object-fit: contain is sufficient on its own.
+      .preview {
+        display: inline-block;
+        width: 100%;
+        aspect-ratio: 3 / 2;
+        object-fit: contain;
+        background-color: var(--global-bg-color);
+      }
+
+      .abbr {
+        margin-bottom: 0.5rem;
+
+        abbr {
+          display: inline-block;
+          background-color: var(--global-theme-color);
+          margin-bottom: 0.5rem;
+          color: var(--global-card-bg-color) !important;
+
+          a {
+            color: white;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+
+        .award {
+          color: var(--global-theme-color) !important;
+          border: 1px solid var(--global-theme-color);
+        }
+      }
+
+      .title {
+        font-weight: bolder;
+      }
+
+      .author {
+        a {
+          border-bottom: 1px dashed var(--global-theme-color);
+
+          &:hover {
+            border-bottom-style: solid;
+            text-decoration: none;
+          }
+        }
+
+        > em {
+          border-bottom: 1px solid;
+          font-style: normal;
+        }
+
+        > span.more-authors {
+          color: var(--global-text-color-light);
+          border-bottom: 1px dashed var(--global-text-color-light);
+          cursor: pointer;
+
+          &:hover {
+            color: var(--global-text-color);
+            border-bottom: 1px dashed var(--global-text-color);
+          }
+        }
+      }
+
+      .links {
+        a.btn {
+          color: var(--global-text-color);
+          border: 1px solid var(--global-text-color);
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-top: 0.25rem;
+          padding-bottom: 0.25rem;
+          margin-left: 0;
+
+          &:hover {
+            color: var(--global-theme-color);
+            border-color: var(--global-theme-color);
+          }
+        }
+        a.award.btn {
+          border-color: var(--global-highlight-color);
+        }
+      }
+
+      .badges {
+        padding-bottom: 0.5rem;
+        span {
+          display: inline-block;
+          color: v.$black-color;
+          height: 100%;
+          padding-right: 0.5rem;
+          vertical-align: middle;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .hidden {
+        font-size: 0.875rem;
+        max-height: 0px;
+        overflow: hidden;
+        text-align: justify;
+        transition-property: 0.15s ease;
+        -moz-transition: 0.15s ease;
+        -ms-transition: 0.15s ease;
+        -o-transition: 0.15s ease;
+        transition: all 0.15s ease;
+
+        p {
+          line-height: 1.4em;
+          margin: 10px;
+        }
+
+        pre {
+          font-size: 1em;
+          line-height: 1.4em;
+          padding: 10px;
+        }
+      }
+
+      .hidden.open {
+        max-height: 100em;
+        transition-property: 0.15s ease;
+        -moz-transition: 0.15s ease;
+        -ms-transition: 0.15s ease;
+        -o-transition: 0.15s ease;
+        transition: all 0.15s ease;
+      }
+
+      div.abstract.hidden {
+        border: dashed 1px var(--global-bg-color);
+      }
+
+      div.abstract.hidden.open {
+        border-color: var(--global-text-color);
+      }
+    }
+    div.award.hidden {
+      border: dashed 1px var(--global-bg-color);
+    }
+    div.award.hidden.open {
+      border-color: var(--global-highlight-color);
+    }
+  }
+}
+
+.citation,
+.citation-number {
+  color: var(--global-theme-color);
+}
+
+// medium-zoom's cloned zoom elements (see the comment on .preview above)
+// are appended directly to document.body — moved entirely OUT of the
+// .publications ol.bibliography li ancestor chain the nested rule above
+// relies on. A descendant selector stops matching once an element is
+// relocated outside its required ancestors, so object-fit silently
+// stopped applying to the clone, falling back to its default (fill),
+// which stretches/distorts the image to its box. This ancestor-free
+// compound selector matches the clone regardless of where medium-zoom
+// moves it in the DOM.
+.preview.medium-zoom-image--opened {
+  object-fit: contain;
+}

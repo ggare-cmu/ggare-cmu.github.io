@@ -1,0 +1,32 @@
+#!/bin/bash
+set -euo pipefail
+
+# Launch a local live-reload preview of the site.
+#
+# Uses the conda "jekyll" env (Ruby 4.0.6 + Jekyll 4.4.1) that the vendored
+# gems in vendor/bundle were built against. Override the env location with
+# JEKYLL_ENV_BIN if it ever moves.
+#
+# Usage: bin/serve [extra jekyll args...]
+#   bin/serve                 # http://localhost:4000/
+#   bin/serve --port 4001     # pick another port
+
+JEKYLL_ENV_BIN="${JEKYLL_ENV_BIN:-/opt/anaconda3/envs/jekyll/bin}"
+
+if [ ! -x "$JEKYLL_ENV_BIN/ruby" ]; then
+  echo "error: Ruby not found at $JEKYLL_ENV_BIN/ruby" >&2
+  echo "       set JEKYLL_ENV_BIN to the bin/ of a Ruby 4.x env, e.g.:" >&2
+  echo "       JEKYLL_ENV_BIN=/path/to/env/bin bin/serve" >&2
+  exit 1
+fi
+
+# Run from the repo root regardless of where the script is invoked.
+cd "$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+export PATH="$JEKYLL_ENV_BIN:$PATH"
+
+echo "Ruby:   $(ruby -v)"
+echo "Serving on http://localhost:4000/  (Ctrl-C to stop)"
+echo
+
+exec bundle exec jekyll serve --livereload "$@"

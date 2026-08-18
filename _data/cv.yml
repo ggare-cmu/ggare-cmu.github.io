@@ -1,0 +1,89 @@
+cv:
+  name: Gautam Rajendrakumar Gare
+  label: Ph.D. Candidate, Robotics Institute, Carnegie Mellon University
+  email: ggare@andrew.cmu.edu
+  location: Pittsburgh, PA
+  image: ""
+  summary: >
+    I make frozen vision-language models do new things without touching their weights, treating
+    adaptation as an inference-time problem: optimizing prompts (DetPO, ECCV 2026), selecting
+    image-conditioned attributes, and reading activations (ACL Findings 2026). I study when and
+    why multimodal models generalize (ICML 2024 Oral) and prove these methods in medical
+    imaging (5 ISBI papers, 4 U.S. patents). On the job market for research scientist roles
+    (graduating late 2026).
+
+  social_networks:
+    - network: GitHub
+      username: ggare-cmu
+    - network: LinkedIn
+      username: gautam-gare
+
+  sections:
+    Education:
+      - institution: Carnegie Mellon University
+        location: Pittsburgh, PA
+        url: https://www.ri.cmu.edu/
+        area: Robotics
+        studyType: Ph.D. (candidate)
+        start_date: 2021
+        end_date: 2026 (expected)
+        highlights:
+          - "Advisors: Prof. John Galeotti and Prof. Deva Ramanan."
+          - "Focus: inference-time adaptation and alignment of vision-language models; generalization; medical imaging AI."
+
+      - institution: Carnegie Mellon University
+        location: Pittsburgh, PA
+        area: Electrical and Computer Engineering
+        studyType: M.S.
+        start_date: 2019
+        end_date: 2020
+        score: "4.00/4.00"
+        highlights:
+          - "Courses: SLAM, Computer Vision, Machine Learning, Optimization, Deep Learning."
+
+      - institution: B.M.S. College of Engineering
+        location: Bangalore, India
+        area: Electronics and Communication
+        studyType: B.E.
+        start_date: 2012
+        end_date: 2016
+
+    Research Experience:
+      - bullet: "**Soft-Prompt Tuning of Vision-Language Models for Few-Shot Object Detection** · Robotics Institute, CMU · *Nov 2025 – Present*. Designed a soft-prompting framework that learns continuous prompt embeddings via gradient-based optimization, enabling task adaptation without modifying VLM weights. Outperformed LoRA fine-tuning in the 10-shot setting, showing lightweight prompt optimization can match or exceed parameter-efficient fine-tuning at low data regimes."
+      - bullet: "**Iterative Prompt Optimization for Few-Shot Object Detection (DetPO)** · Robotics Institute, CMU · *Sep 2025 – Jan 2026*. Developed an iterative prompt-optimization framework using false-positive and false-negative feedback to improve few-shot detection. Achieved state-of-the-art results with contemporary VLMs (e.g., Qwen3, Gemini3) on the RF20 dataset, outperforming specialist models such as GroundingDINO in a black-box setting."
+      - bullet: "**Causal Discovery for Classification** · Robotics Institute, CMU · *Jan 2023 – Aug 2025*. Designed a Markov-blanket-based causal discovery algorithm for feature selection. Demonstrated improved accuracy and interpretability on medical datasets."
+      - bullet: "**Generic Human-Interpretable Lung Ultrasound Biomarkers** · Biomedical Image Guidance Lab, CMU · *2021 – 2025*. Developed interpretable lung ultrasound biomarkers enabling causal and contrastive learning for diagnosis. Showed biomarker-based features match deep features in downstream performance."
+
+    Professional Experience:
+      - bullet: "**AI Research Intern** · Robert Bosch LLC (Bosch Research), Pittsburgh, PA · *May 2026 – Aug 2026*. Researched grounding of vision-language-action (VLA) models for autonomous-vehicle applications, connecting language-conditioned action reasoning to visual scene evidence."
+      - bullet: "**Computer Vision Research Intern** · DawnLight Inc., Palo Alto, CA · *Jun 2021 – Aug 2021*. Developed efficient multimodal action recognition networks (RGB + IR) for clinical monitoring."
+      - bullet: "**Senior Data Scientist & Software Engineer** · Sling Media R&D (Dish Networks), Bangalore, India · *Jul 2016 – Jul 2019*. Led analytics pipeline for user churn modeling and AirTV Player Android app interface optimization. Improved image caching, reducing app startup time by 20%."
+      - bullet: "**Summer Research Fellow** · IIEST, Shibpur, India · *Jun 2015 – Jul 2015*. Built a real-time tele-operated robotic arm system with RGB-D feedback."
+
+    Patents:
+      - bullet: "US12154354B2: System and Method for Labeling Ultrasound Data (granted 2024)"
+      - bullet: "US20240177000A1: System and Method for Training Machine-Learning Models with Probabilistic Confidence Labels (2024)"
+      - bullet: "US20240177445A1: System and Method for Direct Diagnostic and Prognostic Semantic Segmentation of Images (2024)"
+      - bullet: "US20240249498A1: System, Method, and Computer Program Product for Extracting Features from Imaging Biomarkers with ML Models (2024)"
+      - bullet: "US10547891B2: Apparatuses, Systems, and Methods for Adding Functionalities to Control Buttons on a Remote Control Device (granted 2020)"
+      - bullet: "[IN201641006819](https://patentscope.wipo.int/search/en/detail.jsf?docId=IN211817386): An Improved Faucet with Automatic Flow Control Using Proximity Sensor (2016)"
+      - bullet: "[IN201641036243](https://patentscope.wipo.int/search/en/detail.jsf?docId=IN219411880): Add-on Smart Device for Charging Portable Devices (2016)"
+
+    Fellowships and Awards:
+      - bullet: "Liang Zhao Endowed Fellowship, CMU (2025)"
+      - bullet: "CMLH Translational Fellowship, CMU (2022)"
+      - bullet: "NSF XSEDE Compute Grant, 130,500 GPU hours (2020)"
+      - bullet: "Neocortex EUP Compute Award, NSF PSC (2020)"
+
+    Teaching and Service:
+      - bullet: "Guest Lecturer, 16-720 Computer Vision, CMU (Fall 2026)"
+      - bullet: "Research Mentor, prompt-echoing VLM study ([Ask Twice, Look Twice](https://arxiv.org/abs/2607.15565), arXiv 2026)"
+      - bullet: "Research Mentor, [Prognostic Value of Lung Ultrasound Biomarkers for CHF Readmission Risk](https://arxiv.org/abs/2605.18878) (arXiv 2026)"
+      - bullet: "Teaching Assistant, 16-720 Computer Vision, CMU (Spring 2022, Fall 2021)"
+      - bullet: "Reviewer, ECCV (2026), eXCV Workshop at ECCV (2026), MICCAI (2022-2024), HSMR (2023)"
+      - bullet: "Invited Panelist, LL-COVID19 MICCAI Workshop (2021)"
+      - bullet: "Mentor, CMU AI Mentoring Program (2021)"
+
+    Media Coverage:
+      - bullet: '"CMU and others propose a highly practical ''model generalization'' metric, improving out-of-distribution accuracy by 6% \| ICML 2024 Oral", New Zhiyuan (Dec 2024), covering LCA-on-the-Line. [article](https://mp.weixin.qq.com/s/MC8eDigX5WOJySh8StkBDA)'
+      - bullet: '"[Seeing Beneath The Surface](https://www.cs.cmu.edu/link/seeing-beneath-surface)", LINK Magazine, CMU School of Computer Science (Summer 2022)'
