@@ -28,6 +28,58 @@ latest_posts:
   limit: 3
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://ggare-cmu.github.io/#person",
+  "name": "Gautam Rajendrakumar Gare",
+  "givenName": "Gautam",
+  "familyName": "Gare",
+  "alternateName": "Gautam Gare",
+  "url": "https://ggare-cmu.github.io/",
+  "image": "https://ggare-cmu.github.io/assets/img/grg_profile_pic.jpg",
+  "email": "mailto:ggare@andrew.cmu.edu",
+  "jobTitle": "Ph.D. Candidate, Robotics Institute",
+  "description": "Gautam Rajendrakumar Gare is a Ph.D. candidate at the Robotics Institute, Carnegie Mellon University, working on inference-time adaptation and alignment of vision-language models, with applications to object detection and medical imaging.",
+  "knowsAbout": [
+    "Vision-Language Models",
+    "Computer Vision",
+    "Machine Learning",
+    "Multimodal Large Language Models",
+    "Medical Image Analysis",
+    "Interpretable AI"
+  ],
+  "worksFor": {
+    "@type": "CollegeOrUniversity",
+    "name": "Carnegie Mellon University",
+    "sameAs": "https://en.wikipedia.org/wiki/Carnegie_Mellon_University"
+  },
+  "alumniOf": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Carnegie Mellon University",
+      "sameAs": "https://en.wikipedia.org/wiki/Carnegie_Mellon_University"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "B.M.S. College of Engineering",
+      "sameAs": "https://en.wikipedia.org/wiki/B.M.S._College_of_Engineering"
+    }
+  ],
+  "sameAs": [
+    "https://scholar.google.com/citations?user=BX4jUxEAAAAJ",
+    "https://www.linkedin.com/in/gautam-gare",
+    "https://github.com/ggare-cmu",
+    "https://orcid.org/0000-0002-1689-9626",
+    "https://www.semanticscholar.org/author/101891582",
+    "https://dblp.org/pid/274/1621",
+    "https://www.researchgate.net/profile/Gautam-Gare",
+    "https://www.ri.cmu.edu/ri-people/gautam-gare/"
+  ]
+}
+</script>
+
 <div style="border-left: 4px solid #b31b1b; background: rgba(179, 27, 27, 0.07); padding: 0.8rem 1rem; border-radius: 4px; margin-bottom: 1.2rem;">
 <strong>I am on the job market for research scientist roles</strong> (graduating late 2026).
 My focus: vision-language models, inference-time adaptation and alignment, and trustworthy deployment.

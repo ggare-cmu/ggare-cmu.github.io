@@ -7,7 +7,7 @@ first_name: Gautam
 middle_name: Rajendrakumar
 last_name: Gare
 contact_note:
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
+description: >- # folded scalar; ">-" strips the trailing newline (keeps JSON-LD / meta description valid)
   Gautam Gare is a Ph.D. candidate at the Robotics Institute, Carnegie Mellon University,
   working on inference-time adaptation and alignment of vision-language models.
 footer_text: >
