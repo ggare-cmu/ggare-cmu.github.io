@@ -75,7 +75,8 @@ latest_posts:
     "https://www.semanticscholar.org/author/101891582",
     "https://dblp.org/pid/274/1621",
     "https://www.researchgate.net/profile/Gautam-Gare",
-    "https://www.ri.cmu.edu/ri-people/gautam-gare/"
+    "https://www.ri.cmu.edu/ri-people/gautam-gare/",
+    "https://www.cs.cmu.edu/~ggare"
   ]
 }
 </script>

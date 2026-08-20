@@ -117,5 +117,9 @@ top of the new upstream file. Acknowledged overrides are recorded in `.al-folio-
 | `_sass/_publications.scss` | Pre-existing style override of the publications page. | Not yet acknowledged (`overrides accept` to record) |
 | `_includes/zoom_original_fix.liquid` | Local include (used by `about.md`) that points medium-zoom's `data-zoom-src` at the full-res image. | Local include, not a gem shadow |
 | `_data/socials.yml` → `cmu_cs_homepage` | Custom hash-valued social needs `title:`+`logo:` (else the `jekyll-socials` build errors). | Data file |
+| `_pages/about.md` (top) | Hand-written `Person` JSON-LD for SEO / Google Knowledge Panel. `sameAs` = real profiles (Scholar, LinkedIn, GitHub, ORCID, Semantic Scholar, dblp, ResearchGate, RI). Update it if a profile URL changes. | Homepage body |
+| `_config.yml` `description: >-` | Folded scalar uses `>-` (not `>`) so the trailing newline is stripped — keeps the theme's auto `WebSite` JSON-LD and `<meta description>` valid. | Config |
+
+The theme also auto-emits a `WebSite` JSON-LD (with nested `author`) from `al_folio_core`'s `_includes/metadata.liquid`, driven by `_config.yml` (`description`, `serve_schema_org`) and `_data/socials.yml` (its `sameAs`). Validate structured data after deploy: paste/fetch at **validator.schema.org** (checks any schema.org type incl. `Person`) and **search.google.com/test/rich-results** (Google-supported rich types only — `Person` legitimately shows "no rich results", which is expected, not an error).
 
 Related knobs in `_config.yml`: `enable_darkmode: true` (toggle on; set `false` to remove dark mode entirely), `max_width: 1200px` (content width), `enable_medium_zoom: true` (click-to-zoom, used by the wildlife gallery via `data-zoomable`).
