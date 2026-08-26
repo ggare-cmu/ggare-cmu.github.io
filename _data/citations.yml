@@ -1,3 +1,163 @@
 metadata:
-  last_updated: ""
-papers: {}
+  last_updated: '2026-08-26'
+papers:
+  BX4jUxEAAAAJ:0EnyYjriUFMC:
+    citations: 0
+    title: System and Method for Labeling Ultrasound Data
+    year: '2022'
+  BX4jUxEAAAAJ:2osOgNQ5qMEC:
+    citations: 1
+    title: Apparatuses systems, and methods for adding functionalities to control buttons on a remote control device
+    year: '2020'
+  BX4jUxEAAAAJ:3fE2CSJIrl8C:
+    citations: 18
+    title: 'Lca-on-the-line: Benchmarking out-of-distribution generalization with class taxonomies'
+    year: '2024'
+  BX4jUxEAAAAJ:4DMP91E08xMC:
+    citations: 0
+    title: Label Uncertainty for Ultrasound Segmentation
+    year: '2026'
+  BX4jUxEAAAAJ:5nxA0vEk-isC:
+    citations: 1
+    title: 'Artificial intelligence neural network consistently interprets lung ultrasound artifacts in hospitalized patients: A prospective observational study'
+    year: '2023'
+  BX4jUxEAAAAJ:7PzlFSSx8tAC:
+    citations: 0
+    title: Do Real-World Datasets Contain Natural Experiments? An Empirical Study Using Causal Feature Selection
+    year: '2026'
+  BX4jUxEAAAAJ:8k81kl-MbHgC:
+    citations: 0
+    title: 'PLEURAL RETRACTION: A NEW LUNG ULTRASOUND FINDING OF INTERSTITIAL LUNG DISEASE?'
+    year: '2023'
+  BX4jUxEAAAAJ:9yKSN-GCB0IC:
+    citations: 3
+    title: Autonomous Vehicle Technology. A brief overview of the technology and current trends in Autonomous Systems
+    year: '2016'
+  BX4jUxEAAAAJ:IjCSPb-OGe4C:
+    citations: 0
+    title: System and Method for Labeling Ultrasound Data
+    year: '2020'
+  BX4jUxEAAAAJ:L8Ckcad2t8MC:
+    citations: 0
+    title: 'Ask Twice, Look Twice: Prompt Echoing Resolves the Question-First Paradox in Vision-Language Models'
+    year: '2026'
+  BX4jUxEAAAAJ:LkGwnXOMwfcC:
+    citations: 0
+    title: Weakly Supervised Contrastive Learning for Better Severity Scoring of Lung Ultrasound
+    year: '2022'
+  BX4jUxEAAAAJ:M3ejUd6NZC8C:
+    citations: 0
+    title: Lung Ultrasound-based Artificial Intelligence Prediction of Congestive Heart Failure Readmission
+    year: '2025'
+  BX4jUxEAAAAJ:MXK_kJrjxJIC:
+    citations: 0
+    title: Effects of Lung Ultrasound Technique and Pleural Line Depth on In Vitro and In Vivo Measurements of Pleural Line Thickness
+    year: '2024'
+  BX4jUxEAAAAJ:QIV2ME_5wuYC:
+    citations: 0
+    title: 'Prognostic Value of Lung Ultrasound Biomarkers for Readmission Risk in Congestive Heart Failure: A Pilot Data-Driven Analysis'
+    year: '2026'
+  BX4jUxEAAAAJ:Se3iqnhoufwC:
+    citations: 0
+    title: Inverse Kinematic Modeling of Bending Response of Ionic Polymer Metal Composite Actuators
+    year: '2022'
+  BX4jUxEAAAAJ:Tyk-4Ss8FVUC:
+    citations: 0
+    title: An Improved Faucet with Automatic Flow Control using Proximity Sensor
+    year: '2017'
+  BX4jUxEAAAAJ:ULOm3_A8WrAC:
+    citations: 16
+    title: System and Method for Direct Diagnostic and Prognostic Semantic Segmentation of Images
+    year: '2024'
+  BX4jUxEAAAAJ:WF5omc3nYNoC:
+    citations: 42
+    title: 'W-Net: Dense and diagnostic semantic segmentation of subcutaneous and breast tissue in ultrasound images by incorporating ultrasound RF waveform data'
+    year: '2022'
+  BX4jUxEAAAAJ:Wp0gIr-vW9MC:
+    citations: 0
+    title: 'Learner: Contrastive Pretraining for Learning Fine-Grained Patient Progression From Coarse Inter-Patient Labels'
+    year: '2026'
+  BX4jUxEAAAAJ:Y0pCki6q_DkC:
+    citations: 6
+    title: Exploiting class similarity for machine learning with confidence labels and projective loss functions
+    year: '2021'
+  BX4jUxEAAAAJ:YOwf2qJgpHMC:
+    citations: 5
+    title: System, Method, and Computer Program Product for Extracting Features From Imaging Biomarkers With Machine-Learning Models
+    year: '2024'
+  BX4jUxEAAAAJ:YsMSGLbcyi4C:
+    citations: 29
+    title: Dense pixel-labeling for reverse-transfer and diagnostic learning on lung ultrasound for COVID-19 and pneumonia detection
+    year: '2021'
+  BX4jUxEAAAAJ:ZeXyd9-uunAC:
+    citations: 0
+    title: 'Attributes Should Come from Images, Not Class Names: Distribution-Conditioned Attribute Selection for Vision-Language Models'
+    year: '2026'
+  BX4jUxEAAAAJ:Zph67rFs4hoC:
+    citations: 1
+    title: System and Method for Training Machine-Learning Models with Probabilistic Confidence Labels
+    year: '2024'
+  BX4jUxEAAAAJ:_FxGoFyzp5QC:
+    citations: 0
+    title: The Role of Pleura and Adipose in Lung Ultrasound AI
+    year: '2022'
+  BX4jUxEAAAAJ:_kc_bZDykSQC:
+    citations: 0
+    title: AUTOMATED ULTRASOUND PLEURAL LINE MORPHOMETRY TO DIFFERENTIATE ACUTE RESPIRATORY DISTRESS SYNDROME FROM CARDIOGENIC PULMONARY EDEMA
+    year: '2024'
+  BX4jUxEAAAAJ:aqlVkmm33-oC:
+    citations: 7
+    title: Activation reward models for few-shot model alignment
+    year: '2026'
+  BX4jUxEAAAAJ:d1gkVwhDpl0C:
+    citations: 2
+    title: An iteratively optimized resolution to hyper redundancy for dissimilarly doped compliant IPMC actuators
+    year: '2017'
+  BX4jUxEAAAAJ:dhFuZR0502QC:
+    citations: 0
+    title: Human-Aligned Learning of Interpretable Biomarkers for Lung Ultrasound Diagnosis
+    year: '2026'
+  BX4jUxEAAAAJ:eQOLeE2rZwMC:
+    citations: 4
+    title: The Role of Pleura and Adipose in Lung Ultrasound AI
+    year: '2021'
+  BX4jUxEAAAAJ:hqOjcs7Dif8C:
+    citations: 5
+    title: Learning generic lung ultrasound biomarkers for decoupling feature extraction from downstream tasks
+    year: '2022'
+  BX4jUxEAAAAJ:kNdYIx-mwKoC:
+    citations: 0
+    title: Improving Model's Interpretability and Reliability using Biomarkers
+    year: '2024'
+  BX4jUxEAAAAJ:mVmsd5A6BfQC:
+    citations: 2
+    title: 'DetPO: In-Context Learning with Multi-Modal LLMs for Few-Shot Object Detection'
+    year: '2026'
+  BX4jUxEAAAAJ:qUcmZB5y_30C:
+    citations: 0
+    title: The Role of Pleura and Adipose in Lung
+    year: '2021'
+  BX4jUxEAAAAJ:qjMakFHDy7sC:
+    citations: 5
+    title: 'W-Net: Dense Semantic Segmentation of Subcutaneous Tissue in Ultrasound Images by Expanding U-Net to Incorporate Ultrasound RF Waveform Data'
+    year: '2020'
+  BX4jUxEAAAAJ:qxL8FJ1GzNcC:
+    citations: 0
+    title: Machine Learning Prediction of Disease Severity in Patients With Interstitial Lung Disease Based on Lung Ultrasound and CT Imaging
+    year: '2025'
+  BX4jUxEAAAAJ:roLk4NBRz8UC:
+    citations: 0
+    title: Dense Pixel-Labeling for Reverse-Transfer and Diagnostic Learning on Lung Ultrasound for COVID-19 and Pneumonia Detection
+    year: '2022'
+  BX4jUxEAAAAJ:u5HHmVD_uO8C:
+    citations: 0
+    title: Custom 8 Bit Microprocessor Designing and Implementation on FPGA Board
+    year: Unknown Year
+  BX4jUxEAAAAJ:ufrVoPGSRksC:
+    citations: 11
+    title: Weakly supervised contrastive learning for better severity scoring of lung ultrasound
+    year: '2025'
+  BX4jUxEAAAAJ:zYLM7Y9cAGgC:
+    citations: 0
+    title: Add-On Smart Device for Charging Portable Devices
+    year: '2018'
