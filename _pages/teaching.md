@@ -9,7 +9,7 @@ nav_order: 5
 
 **Teaching**
 
-- Guest Lecturer, [16-720 Computer Vision](https://www.cs.cmu.edu/~16385/), Carnegie Mellon University (Fall 2026).
+- Guest Lecturer, [16-720 Computer Vision](https://www.cs.cmu.edu/~16385/) and 16-199 Robotics in the Real World, Carnegie Mellon University (Fall 2026).
 - Teaching Assistant, [16-720 Computer Vision](https://www.cs.cmu.edu/~16385/), Carnegie Mellon University (Spring 2022, Fall 2021).
 
 **Reviewing**

@@ -107,12 +107,7 @@ in the high-stakes setting of medical imaging (5 ISBI papers, \textbf{4 U.S. pat
 \cvevent{Soft-Prompt Tuning of Vision–Language Models for Few-Shot Object Detection}
 {Robotics Institute, CMU}{Nov 2025 -- Present}{}
 \begin{itemize}
-    \item Designed a soft-prompting framework that learns continuous prompt embeddings 
-          via gradient-based optimization, enabling efficient task adaptation without 
-          modifying the underlying VLM weights.
-    \item Outperformed LoRA fine-tuning in the 10-shot setting, demonstrating that 
-          lightweight prompt optimization can match or exceed parameter-efficient 
-          fine-tuning methods at low data regimes.
+    \item A few learned prompt tokens on a frozen VLM match LoRA at 20,000x fewer parameters with no forgetting, and extend to real-world robot manipulation via a frozen vision-language-action policy (arXiv:2609.11310).
 \end{itemize}
 
 \vspace{-0.25cm}
@@ -187,6 +182,12 @@ in the high-stakes setting of medical imaging (5 ISBI papers, \textbf{4 U.S. pat
 \publink{https://arxiv.org/abs/2603.23455}{paper}~\publink{https://ggare-cmu.github.io/DetPO/}{project}~\publink{https://github.com/ggare-cmu/DetPO}{code}
 \divider
 
+\item \textbf{G.R. Gare}, S. Li, H. Wang, C.D. Hernandez, W. Zhao, W.M. Pauli, J. Galeotti, D. Ramanan.\\
+\emph{Your Model Already Knows, Don't Teach It, Learn to Ask It: Soft Prompting for Few-Shot Adaptation of Vision-Language Models.}\\
+\textbf{arXiv preprint arXiv:2609.11310}, 2026.
+\publink{https://arxiv.org/abs/2609.11310}{paper}
+\divider
+
 \item \textbf{Gare, G.R.}, J. Shi, Z. Lin, D. Pathak, J. Galeotti, D. Ramanan.\\
 \emph{Attributes Should Come from Images, Not Class Names: Distribution-Conditioned Attribute Selection for VLMs.}\\
 \textbf{PFATCV Workshop at ECCV}, 2026. \textbf{(Oral)}
@@ -195,7 +196,7 @@ in the high-stakes setting of medical imaging (5 ISBI papers, \textbf{4 U.S. pat
 
 \item R. H. Abhinandan, J. Galeotti, D. Ramanan, \textbf{G.R. Gare}.\\
 \emph{Ask Twice, Look Twice: Prompt Echoing Resolves the Question-First Paradox in Vision-Language Models.}\\
-\textbf{eXCV Workshop at ECCV}, 2026.
+\textbf{eXCV Workshop at ECCV}, 2026. \textbf{(Spotlight Oral)}
 \publink{https://arxiv.org/abs/2607.15565}{paper}~\publink{https://rakshanda-cmu.github.io/ask-twice-look-twice/}{project}
 \divider
 
@@ -328,7 +329,7 @@ in the high-stakes setting of medical imaging (5 ISBI papers, \textbf{4 U.S. pat
 \cvsection{Teaching \& Service}
 
 \begin{itemize}
-\item Guest Lecturer – 16-720 Computer Vision (Fall 2026)
+\item Guest Lecturer – 16-720 Computer Vision and 16-199 Robotics in the Real World (Fall 2026)
 \item Research Mentor – supervised the prompt-echoing VLM study (arXiv:2607.15565, 2026)
 \item Research Mentor – supervised the lung-ultrasound CHF-readmission study (arXiv:2605.18878, 2026)
 \item Teaching Assistant – 16-720 Computer Vision (Spring 2022, Fall 2021)

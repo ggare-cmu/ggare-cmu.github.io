@@ -18,6 +18,20 @@
   bibtex_show = {true}
 }
 
+@article{gare2026softprompt,
+  preview     = {SoftPrompting_Teaser_Figure.png},
+  abstract    = {We address few-shot object detection with vision-language models (VLMs) in out-of-domain settings such as aerial, industrial, and medical imagery, using only ten annotated images for supervision. Existing adaptation methods are discrete prompt optimization and LoRA fine-tuning. We revisit a third option: soft prompting, where a small number of continuous prompt tokens are optimized while the pretrained backbone remains frozen. We identify two key design choices. First, placing prompt tokens at the cross-modal boundary between visual and text tokens outperforms other placements (10.0 vs. 8.4 mAP). Second, initializing prompts from the empty space token outperforms semantic and random initialization. With these choices, one to three learned tokens (7,168 parameters on average) match the best LoRA configuration on Roboflow20-VL (14.2 mAP, 10-shot) while training over 20,000x fewer parameters. Soft prompting remains harder to optimize, exhibiting higher variance across random seeds. Unlike LoRA, however, it causes no forgetting: the LoRA rank matching our accuracy reduces NaturalBench VQA accuracy by 35\% relative, rising to 56\% at the largest rank, whereas soft prompting leaves pretrained performance unchanged. The learned tokens behave like prompts rather than weights. They transfer to a newer model without retraining (+0.8 mAP on Qwen3.5-9B) and can be verbalized into readable prompts competitive with prompt-search methods (matching DetPO and outperforming GEPA). The approach also extends beyond detection. On RoboCasa manipulation tasks, the frozen π0.5 vision-language-action policy benefits from soft prompting, matching the LoRA baseline on two of three tasks when tokens are placed at the gradient bottleneck. These results suggest modern VLMs already encode much of what is needed for specialized domains; the challenge is learning how to ask.},
+  abbr        = {arXiv},
+  title       = {Your Model Already Knows, Don't Teach It, Learn to Ask It: Soft Prompting for Few-Shot Adaptation of Vision-Language Models},
+  author      = {Gare, Gautam Rajendrakumar and Li, Siyi and Wang, Hewei and Hernandez, Cesar Daniel and Zhao, Wei and Pauli, Wolfgang M. and Galeotti, John Michael and Ramanan, Deva},
+  journal     = {arXiv preprint arXiv:2609.11310},
+  year        = {2026},
+  arxiv       = {2609.11310},
+  pdf         = {https://arxiv.org/abs/2609.11310},
+  selected    = {true},
+  bibtex_show = {true}
+}
+
 @article{gare2026naturalexp,
   preview     = {gare2026naturalexp.png},
   abstract    = {In nature, events that affect some individuals or groups but not others constitute an implicit intervention and are known as natural experiments. For example, the COVID-19 pandemic was an intervention by the coronavirus on the sub-population infected with COVID. We ask, \emph{do natural experiments occur in existing real-world datasets? If yes, how should we treat them?} To detect natural experiments in data, we use causal discovery to recover the underlying causal graph and perform feature selection based on causal links. If downstream performance improves by treating the data as interventional rather than observational, we argue that this suggests the dataset contains natural experiments. We first validate this hypothesis by simulating datasets with and without natural experiments using synthetic graphs. We then perform a systematic empirical evaluation on a large suite of real-world datasets. Our results indicate that \emph{real-world datasets do contain natural experiments and we can take advantage of those natural experiments to improve model performance using causal inference}. Our work represents the initial foray into this area, offering a preliminary exploration within a limited scope.},
@@ -57,6 +71,8 @@
   author      = {Abhinandan, Rakshanda Hassan and Galeotti, John Michael and Ramanan, Deva and Gare, Gautam Rajendrakumar},
   booktitle   = {eXCV Workshop at ECCV},
   year        = {2026},
+  award       = {Spotlight Oral at eXCV Workshop, ECCV 2026},
+  award_name  = {Spotlight},
   arxiv       = {2607.15565},
   pdf         = {https://arxiv.org/abs/2607.15565},
   website     = {https://rakshanda-cmu.github.io/ask-twice-look-twice/},

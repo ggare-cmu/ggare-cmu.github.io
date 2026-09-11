@@ -14,7 +14,7 @@ category:
 - **DetPO** (ECCV 2026): an iterative prompt-optimization framework that mines false-positive and false-negative feedback to rewrite detection prompts. With contemporary VLMs (e.g., Qwen3, Gemini3) it reaches state-of-the-art few-shot detection on the RF20 benchmark, outperforming specialist models such as GroundingDINO, entirely in a black-box setting. [Code](https://github.com/ggare-cmu/DetPO) · [Project page](https://ggare-cmu.github.io/DetPO/)
 - **Distribution-conditioned attribute selection** (PFATCV Workshop at ECCV 2026, **Oral**): LLM-generated class descriptors are label-conditioned, not image-conditioned; removing class names collapses ImageNet accuracy from 59.5% to 15.5%. Selecting attributes directly from target images in CLIP's embedding space recovers 23.8% without class names, beats CoOp at minimal cost, and yields interpretable dataset summaries. [arXiv](https://arxiv.org/abs/2607.18695) · [Project page](https://ggare-cmu.github.io/AttributeSelect/)
 - **Activation Reward Models** (ACL Findings 2026): reward models built from VLM activations align model behavior from a handful of examples. [Paper](https://aclanthology.org/2026.findings-acl.1709/)
-- **Soft-prompt tuning** (ongoing): learned continuous prompt embeddings match or exceed LoRA fine-tuning in the 10-shot setting.
+- **Soft prompting** (arXiv 2026): one to three learned continuous prompt tokens match LoRA fine-tuning at ~20,000x fewer parameters, with no catastrophic forgetting, and transfer across VLMs and even to a vision-language-action policy. [arXiv](https://arxiv.org/abs/2609.11310)
 
 **Why it matters.** Adaptation becomes an inference-time problem rather than a training problem: cheaper to deploy, auditable, and usable with closed-weight models.
 
